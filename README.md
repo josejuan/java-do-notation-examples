@@ -1,5 +1,38 @@
 # java do notation example
 
+## quick class descriptions
+
+* `Either`, typical monad.
+* `MOption`, the _Java 8_ `Option` monad wrapper to support `BindTo`.
+* `MStream`, the _Java 8_ `Stream` monad wrapper to support `BindTo`.
+* `Parser`, utility methods.
+* `Tuple`, for anonymous data types.
+* `main`, the example.
+
+## example
+
+The example read lazily one (potentially big) file with quadratic equations like:
+
+```
+A x^2 + B x + C
+```
+
+Multiple equations for each line is valid separating equations by `;`.
+
+The process compute only real equation roots.
+
+The process write the valid result or one error with line and equation number if parsing or complex number as result is given.
+
+The process consume a constant amount of memory (no matter how big is the input file).
+
+## configuration
+
+On `build.gradle` file you should configure the path to the `lombok` with `java-do-notation`.
+
+## example runs
+
+I created seven equations files, the file `equations.7z` contains random instances for `10^1`, `10^2`, ... and `10^5` lines (each line with 5 average equations).
+
 ```
 $ wc -l t[1-7].equations
         10 t1.equations
