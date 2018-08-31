@@ -1,5 +1,7 @@
 # java do notation example
 
+Simple example for https://github.com/josejuan/lombok a lombok fork with `bind` and `BindTo` extensions to support _"Java do notation"_.
+
 ## quick class descriptions
 
 * `Either`, typical monad.
